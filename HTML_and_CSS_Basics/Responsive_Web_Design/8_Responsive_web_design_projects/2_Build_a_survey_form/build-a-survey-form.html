@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario de encuesta</title>
+  </head>
+  <body>
+    <main id="main">
+        <h1 id="title">
+          Formulario de encuesta
+        </h1>
+        <p>Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma</p>
+
+        <form>
+          <div class="form-group">
+          <label id="name-label" for="name">Nombre</label>
+          <input type="text" name="name" id="name" placeholder="Introduzca su nombre" required autofocus>
+          </div>
+          <div>
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Introduzca su Email" required>
+          </div>
+          <div>
+            <label id="age-label" for="age">Edad</label>
+            <input type="number" name="age" id="age" placeholder="Introduzca su edad">
+          </div>
+          <div class="form-group">
+            <label for="function">¿Qué opción describe mejor su ocupacion actual?</label>
+            <select class="" name="role" id="function" required>
+              <option disabled selected value>Seleccione ocupacion</option>
+              <option value="">Estudiante</option>
+              <option value="">Trabajo de tiempo completo</option>
+              <option value="">Prefiero no decir</option>
+              <option value="">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>¿Nos recomendarías?</legend>
+              <input id="si" type="radio" name="recomendation" value="si">
+              <label for="si">Definitivamente</label>
+              <input id="talvez" type="radio" name="recomendation" value="talvez">
+              <label for="talvez">Tal vez</label>
+              <input id="no" type="radio" name="recomendation" value="no">
+              <label for="no">No</label>
+            </fieldset>
+
+          </div>
+
+
+        </form>
+
+
+    </main>
+
+  </body>
+</html>
