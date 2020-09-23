@@ -1,0 +1,58 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #aacc55;
+  font-family: serif, sans-serif;
+  color: white;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+h1, p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+form {
+  max-width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.form-group, fieldset {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, select {
+  border-radius: 5px;
+  margin: 3px;
+  padding:0.8rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: #3a8aa7;
+  padding: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+
+@media (max-width:400px){
+  body {
+    font-size: 3rem;
+    padding: 5px;
+  }
+
+}

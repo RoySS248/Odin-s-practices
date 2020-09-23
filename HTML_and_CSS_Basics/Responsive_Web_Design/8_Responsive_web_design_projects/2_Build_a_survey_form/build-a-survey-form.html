@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+  <link rel="stylesheet" href="./Assets/survey-form.css">
   <meta charset="utf-8">
   <title>Formulario de encuesta</title>
 </head>
@@ -11,96 +12,126 @@
     <h1 id="title">
       Formulario de encuesta
     </h1>
-    <p>Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma</p>
+    <p id="description">Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma</p>
 
-    <form>
+    <form id="survey-form">
+      <!-- NAME -->
       <div class="form-group">
         <label id="name-label" for="name">Nombre</label>
         <input type="text" name="name" id="name" placeholder="Introduzca su nombre" required autofocus>
       </div>
-
-      <div>
+      <!-- EMAIL -->
+      <div class="form-group">
         <label id="email-label" for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Introduzca su Email" required>
       </div>
-
-      <div>
-        <label id="age-label" for="age">Edad</label>
-        <input type="number" name="age" id="age" placeholder="Introduzca su edad">
+      <!-- EDAD -->
+      <div class="form-group">
+        <label id="number-label" for="number">Edad (Opcional)</label>
+        <input type="number" name="number" min="10" max="100" id="number" placeholder="Introduzca su edad">
       </div>
-
+      <!-- SELECT ¿Que opcion decribe mejor? -->
       <div class="form-group">
         <label for="function">¿Qué opción describe mejor su ocupacion actual?</label>
-        <select class="" name="role" id="function" required>
+        <select class="" name="role" id="dropdown" required>
           <option disabled selected value>Seleccione ocupacion</option>
-          <option value="">Estudiante</option>
-          <option value="">Trabajo de tiempo completo</option>
-          <option value="">Prefiero no decir</option>
-          <option value="">Otro</option>
+          <option value="estudiante">Estudiante</option>
+          <option value="trabajo">Trabajo de tiempo completo</option>
+          <option value="noDecir">Prefiero no decir</option>
+          <option value="otro">Otro</option>
         </select>
       </div>
-
+      <!-- RADIO ¿Nos recomendarias? -->
       <div class="form-group">
         <fieldset>
           <legend>¿Nos recomendarías?</legend>
-          <input id="si" type="radio" name="recomendation" value="si">
-          <label for="si">Definitivamente</label>
-          <input id="talvez" type="radio" name="recomendation" value="talvez">
-          <label for="talvez">Tal vez</label>
-          <input id="no" type="radio" name="recomendation" value="no">
-          <label for="no">No</label>
+          <label for="si">
+            <input id="si" type="radio" name="recomendation" value="si">
+            Definitivamente</label>
+
+          <label for="talvez">
+            <input id="talvez" type="radio" name="recomendation" value="talvez">
+            Tal vez</label>
+
+          <label for="no">
+            <input id="no" type="radio" name="recomendation" value="no">
+            No</label>
         </fieldset>
       </div>
-
+      <!-- SELECT ¿Cuál es tu característica favorita? -->
+      <div class="form-group">
+        <label for="function">¿Cuál es tu característica favorita?</label>
+        <select class="" name="role" id="function" required>
+          <option disabled selected value>Seleccione ocupacion</option>
+          <option value="desafios">Desafios</option>
+          <option value="proyectos">Proyectos</option>
+          <option value="comunidad">Comunidad</option>
+          <option value="codigoAbierto">Codigo abierto</option>
+        </select>
+      </div>
+      <!-- CHECKBOX ¿Que le gustaria ver mejorado? -->
       <div class="form-group">
         <fieldset>
           <legend>¿Qué le gustaría ver mejorado? (Marque todo lo que corresponda)</legend>
-          <input id="frontend" type="checkbox" value="frontend">
-          <label for="frontend">Proyectos Front-End</label>
 
-          <input id="backend" type="checkbox" value="backend">
-          <label for="frontend">Proyectos Back-End</label>
+          <label for="frontend">
+            <input id="frontend" type="checkbox" value="frontend">
+            Proyectos Front-End</label>
 
-          <input id="datavisualization" type="checkbox" value="datavisualization">
-          <label for="datavisualization">Visualizacion de datos</label>
+          <label for="backend">
+            <input id="backend" type="checkbox" value="backend">
+            Proyectos Back-End</label>
 
-          <input id="changes" type="checkbox" value="changes">
-          <label for="changes">Cambios</label>
+          <label for="datavisualization">
+            <input id="datavisualization" type="checkbox" value="datavisualization">
+            Visualizacion de datos</label>
 
-          <input id="opensource" type="checkbox" value="opensource">
-          <label for="frontend">Comunidad codigo abierto</label>
+          <label for="changes">
+            <input id="changes" type="checkbox" value="changes">
+            Cambios</label>
 
-          <input id="gitter" type="checkbox" value="gitter">
-          <label for="frontend">Salas de ayuda de Gitter</label>
+          <label for="opensource">
+            <input id="opensource" type="checkbox" value="opensource">
+            Comunidad codigo abierto</label>
 
-          <input id="videos" type="checkbox" value="videos">
-          <label for="videos">Videos</label>
+          <label for="gitter">
+            <input id="gitter" type="checkbox" value="gitter">
+            Salas de ayuda de Gitter</label>
 
-          <input id="meetups" type="checkbox" value="meetups">
-          <label for="meetups">Reunion de ciudad</label>
+          <label for="videos">
+            <input id="videos" type="checkbox" value="videos">
+            Videos</label>
 
-          <input id="wiki" type="checkbox" value="wiki">
-          <label for="wiki">Wiki</label>
+          <label for="meetups">
+            <input id="meetups" type="checkbox" value="meetups">
+            Reunion de ciudad</label>
 
-          <input id="forum" type="checkbox" value="forum">
-          <label for="forum">Foro</label>
+          <label for="wiki">
+            <input id="wiki" type="checkbox" value="wiki">
+            Wiki</label>
 
-          <input id="addcourses" type="checkbox" value="addcourses">
-          <label for="addcourses">Cursos adicionales</label>
+          <label for="forum">
+            <input id="forum" type="checkbox" value="forum">
+            Foro</label>
 
+          <label for="addcourses">
+            <input id="addcourses" type="checkbox" value="addcourses">
+            Cursos adicionales</label>
         </fieldset>
       </div>
-
+      <!-- TEXTAREA Comentarios-->
       <div class="form-group">
-        <label>Comentarios o sugerencias?</label>
+        <label>¿Comentarios o sugerencias?</label>
         <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
       </div>
-
+      <!-- BUTTON Enviar -->
+      <div class="form-group">
+        <button type="submit" id="submit">
+          Enviar
+        </button>
+      </div>
     </form>
-
-
   </main>
-
 </body>
 
 </html>
