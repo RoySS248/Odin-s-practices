@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  font-family: sans-serif, serif;
+}
+
+img {
+  width: 100%;
+  max-width: 550px;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+  min-height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#Hero {
+  margin-top: 100px;
+}
+
+#Hero h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#Hero form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+#Hero input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 40vw;
+  margin: 10px;
+}
+
+button {
+  background-color: #fbc112;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: fantasy;
+  text-transform: uppercase;
+  width: 20vw;
+}
+
+#features, #how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.description {
+  max-width: 60vw;
+  margin: 10px;
+}
+
+#pricing {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card h2{
+
+    background-color: #ddd;
+}
+
+ol {
+  list-style: none;
+}
+
+footer {
+  background-color: #ddd;
+  min-height: 50px;
+  width: 100%;
+}
+
+footer ul, footer p {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer ul li {
+  padding: 0 10px;
+}
