@@ -25,14 +25,14 @@ body {
 
 #navbar {
   position: fixed;
-  top: 10vw;
+  top: 5vw;
   left: 5px;
-  height: 100%;
+  max-height: 80vw;
   width: 25vw;
 }
 
 #main {
-  margin-top: 10vw;
+  margin-top: 5vw;
   margin-left: 25vw;
 }
 
@@ -63,6 +63,7 @@ navbar ul li {
   text-decoration: none;
   color: black;
 }
+
 
 @media (max-width: 600px) {
   #title {
