@@ -8,7 +8,6 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
   font-size: 1.5vw;
-  ;
   /*display: flex;
   flex-direction: row;*/
 }
@@ -65,10 +64,17 @@ navbar ul li {
 }
 
 
-@media (max-width: 600px) {
-  #title {
-  font-size: 80px;
+@media (max-width: 500px) {
+
+  body{
+    font-size: 5vw;
   }
+
+  #title {
+  font-size: 25px;
+  width: 80%;
+  }
+
   #navbar {
     position: relative;
     width: 100%;
