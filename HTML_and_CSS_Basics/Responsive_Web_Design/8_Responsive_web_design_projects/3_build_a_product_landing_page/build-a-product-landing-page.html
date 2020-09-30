@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <link rel="stylesheet" href="./Assets/landing_page.css">
   <meta charset="utf-8">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Assets/landing_page.css">
+  <title>Product page</title>
 </head>
 
 <body>
   <header>
-    <div id="logo"><img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="Logo Original Trombones"></div>
-    <nav>
+    <div id="logo">
+      <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="Logo Original Trombones" width="650px">
+    </div>
+    <navbar id="navbar">
       <ul>
-        <li><a href="#features">Caracteristicas</a></li>
-        <li><a href="#how-it-works">¿Como funciona?</a></li>
-        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#features" class="navbar-item">Caracteristicas</a></li>
+        <li><a href="#how-it-works" class="navbar-item">¿Como funciona?</a></li>
+        <li><a href="#pricing" class="navbar-item">Precios</a></li>
       </ul>
-    </nav>
+    </navbar>
   </header>
 
   <main>
-    <div id="Hero">
+    <div id="hero">
       <h2>Obras maestras hechas a mano y hechas en casa</h2>
       <form id="form">
-        <input type="email" name="email" id="email" placeholder="Introduce tu email" required>
+        <input type="email" name="email" id="email" placeholder="Introduce tu email" required><br>
         <button type="button" name="subit" type="submit">Comencemos</button>
       </form>
     </div>
@@ -52,7 +53,7 @@
 
     <div id="pricing">
       <div class="product-card" id="tenor">
-        <h2>TENOR TROMBONE</h2>
+        <h2 class="title-card">TENOR TROMBONE</h2>
         <h2>$600</h2>
         <ol>
           <li>Lorem ipsum.</li>
@@ -64,7 +65,7 @@
       </div>
 
       <div class="product-card" id="bass">
-        <h2>BASS TROMBONE</h2>
+        <h2 class="title-card">BASS TROMBONE</h2>
         <h2>$900</h2>
         <ol>
           <li>Lorem ipsum.</li>
@@ -76,7 +77,7 @@
       </div>
 
       <div class="product-card" id="valve">
-        <h2>VALVE TROMBONE</h2>
+        <h2 class="title-card">VALVE TROMBONE</h2>
         <h2>$1200</h2>
         <ol>
           <li>Plays similar to a Trumpet</li>
@@ -92,9 +93,9 @@
 </body>
 <footer>
   <ul>
-    <li><a href="#">Privacidad</a></li>
-    <li><a href="#">Terminos</a></li>
-    <li><a href="#">Contactanos</a></li>
+    <li><a href="#" class="footer-item">Privacidad</a></li>
+    <li><a href="#" class="footer-item">Terminos</a></li>
+    <li><a href="#" class="footer-item">Contactanos</a></li>
   </ul>
   <p>Copyright 2020, Original Trombones</p>
 </footer>
