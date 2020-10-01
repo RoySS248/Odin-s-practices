@@ -13,7 +13,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: red;
+  background-color: #ddd;
   width: 100%;
   height: 5vw;
   display: flex;
@@ -21,14 +21,12 @@ header {
 }
 
 img {
-  background-color: green;
   max-width: 40vw;
 }
 
 #navbar ul {
   width: 50vw;
   height: 5vw;
-  background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -45,7 +43,7 @@ li {
 }
 
 footer {
-  background-color: lightblue;
+  background-color: #ddd;
   width: 100%;
   height: 5vw;
   text-align: right;
@@ -54,7 +52,6 @@ footer {
 }
 
 footer ul {
-  background-color: purple;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -62,7 +59,6 @@ footer ul {
 }
 
 .footer-item {
-  background-color: pink;
   margin: 0 1vw;
   font-size: 1.3em;
   text-decoration: none;
@@ -70,69 +66,95 @@ footer ul {
 }
 
 #hero {
-  background-color: blue;
   margin-top: 5vw;
   padding: 3vw 0;
   text-align: center;
   font-size: 1.3em;
 }
 
-input{
+input {
   margin: 2vw 0;
 }
 
 #features {
-  background-color: orange;
   margin: 5vw auto;
 }
-.description{
-  background-color: yellow;
+
+.description {
   font-size: 1.4em;
   max-width: 70vw;
   margin: 3vw auto;
   line-height: 1.3;
 }
 
-#how-it-works{
-  text-align: center;
-  max-width: 60vw;
+#how-it-works {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
 }
 
-#pricing{
-  background-color: cyan;
+#pricing {
   width: 80vw;
   margin: 2vw auto;
   display: flex;
   justify-content: space-around;
 }
-.product-card{
+
+.product-card {
+  margin: 1vw;
   background-color: white;
   border: black 1px solid;
   border-radius: 5px;
   text-align: center;
 }
 
-.product-card ol{
+.product-card ol {
   padding: 2vw;
 }
 
-button, h2{
+button, h2 {
   margin: 1vw 0;
 }
-.title-card{
-  margin:0;
-padding: 1vw;
-background-color: orange;
+
+.title-card {
+  margin: 0;
+  padding: 1vw;
+  background-color: orange;
 }
 
-button{
+button {
   background-color: darkorange;
   padding: 1vw;
   border: none;
 }
 
-@media (max-width: 800px){
-  body{
-    background-color: black;
+@media (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+
+  header {
+    height: 20vw;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 95vw;
+  }
+
+  #navbar ul {
+    width: 100vw;
+    font-size: 0.8em;
+  }
+
+  #hero {
+    margin-top: 20vw;
+  }
+
+  #pricing {
+    flex-direction: column;
+  }
+  .footer-item {
+    font-size: 0.8em;
   }
 }
