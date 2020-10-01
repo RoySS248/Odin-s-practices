@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: red;
+  font-family: serif, sans-serif;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+#navbar {
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6vw;
+}
+
+.nav-list {
+  background-color: pink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6vw;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-item {
+  background-color: yellow;
+  color: white;
+  text-decoration: none;
+  height: 10vw;
+  font-size: 2em;
+  padding: 0 2vw;
+}
+
+#welcome-section {
+  background-color: cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#title {
+  font-size: 5em;
+}
+
+#subtitle {
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+#projects-section {
+  background-color: blue;
+  padding: 2vw;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.projects-header {
+  text-align: center;
+  margin: 5vw auto 3vw auto;
+  padding: 0 0 1.6vw 0;
+  color: white;
+  max-width: 80vw;
+  border-bottom: 0.15em solid white;
+}
+
+.projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.project {
+  background-color: black;
+  padding: 0.5vw;
+  text-decoration: none;
+}
+
+.project-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  background-color: white;
+}
+
+.project-title {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.btn-ver-mas {
+  background-color: purple;
+  text-decoration: none;
+  color: white;
+  font-size: 2.5em;
+  padding: .8vw 1.5vw;
+  border-radius: 2px;
+}
+
+#contact-section {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+}
+
+#title2 {
+  font-size: 5em;
+}
+
+#subtitle2 {
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+.contact-links{
+  padding: 3vw 0;
+  background-color: black;
+}
+
+.btn-contact{
+  padding: 0 2vw;
+  color:white;
+  font-size: 2em;
+}
+
+footer{
+  background-color: black;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-footer, .copy-footer{
+  color:white;
+  font-size: 1.5em;
+  width: 80vh;
+  padding: 0 2vw;
+}
+.copy-footer{
+  text-align: right;
+}
