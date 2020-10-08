@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>FizzBuzz</title>
+  <script>
+    function generateFizzBuzz() {
+      for (let i = 1; i < 101; i++) {
+        if (i % 15 === 0) {
+          addText("FizzBuzz");
+        } else if (i % 3 === 0) {
+          addText("Fizz");
+        } else if (i % 5 === 0) {
+          addText("Buzz");
+        }else{
+        addText(i);
+        }
+      }
+
+      function addText(i) {
+        var text = document.createTextNode(" " + i + ", ");
+        document.getElementById("listNumber").appendChild(text);
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <main>
+    <h1>FizzBuzz</h1>
+    <button onclick="generateFizzBuzz()">Empezar!</button>
+    <p id="listNumber">FizzBuzz Numbers: </p>
+  </main>
+
+</body>
+
+</html>
