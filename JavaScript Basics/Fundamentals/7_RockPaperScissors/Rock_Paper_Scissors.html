@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>piedra papel tijeras</title>
+  <script>
+    let playerSelection;
+    let computerSelection;
+    let computerScore;
+    let playerScore;
+
+    function computerPlay() {
+      let computerSelection = Math.floor((Math.random() * 3) + 1);
+      switch (computerSelection) {
+        case 1:
+          return "piedra";
+          break;
+        case 2:
+          return "papel";
+          break;
+        case 3:
+          return "tijeras";
+          break;
+      }
+    }
+
+    function playRound(playerSelection, computerSelection) {
+      playerSelection = prompt("¿Piedra, papel o tijeras? Ingresa tu elecion: ");
+      computerSelection = computerPlay();
+      playerSelection = playerSelection.toLowerCase();
+
+      if (playerSelection === computerSelection) {
+        return "Empate!";
+      } else if (playerSelection === "piedra" && computerSelection === "tijeras") {
+        return "El jugador gana!";
+      } else if (playerSelection === "papel" && computerSelection === "piedra") {
+        return "El jugador gana!";
+      } else if (playerSelection === "tijeras" && computerSelection === "papel") {
+        return "El jugador gana!";
+      } else if (playerSelection !== "piedra" && playerSelection !== "papel" && playerSelection !== "tijeras") {
+        return "Tu seleccion no fue valida.";
+      } else {
+        return "Pierdes!"
+      }
+    }
+
+    function game() {
+
+      computerScore = 0;
+      playerScore = 0;
+
+      for (let i = 1; i <= 5; i++) {
+
+        let winner = playRound();
+
+        console.log("Turno: " + i);
+
+        switch (winner) {
+          case "El jugador gana!":
+            playerScore++;
+            console.log("Player gana: " + playerScore);
+            break;
+
+          case "Pierdes!":
+            computerScore++;
+            console.log("Computadora gana : " + computerScore);
+            break;
+
+          case "Empate!":
+            console.log("Empate!");
+            break;
+
+          case "Tu seleccion no fue valida.":
+            console.log("Tu seleccion no fue valida, vuelve a intentar");
+            i--;
+            break;
+        }
+      }
+
+      if (playerScore === computerScore) {
+        return "Esto fue un empate!"
+      } else if (playerScore > computerScore) {
+        return "El jugador a ganado!";
+      } else if (playerScore < computerScore) {
+        return "La computadora a ganado!";
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
