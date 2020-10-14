@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Looping_Code</title>
+  <script type="text/javascript">
+    //Numeros decrecientes y ascendentes
+    function list_number() {
+      var i = 1;
+      while (i <= 10) {
+        console.log(i + " ----- " + (11 - i));
+        i++;
+      }
+    }
+
+
+    // Desglosar valor numerico en millares, decenas, etc.
+    function descompose_number() {
+      number = prompt("Ingresa el numero: ");
+
+      while (number > 0) {
+        resto = number % 10;
+        number = parseInt(number / 10);
+        console.log(resto);
+      }
+    }
+
+
+    //Agrega el numero dado en mayor a menor
+    function order_number() {
+      numbers = [2, 3, 4, 5, 6];
+      newNumber = prompt("Nuevo valor: ");
+
+      //Inicio: Ordena mayor a menor
+      for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length - 1; j++) {
+
+          if (numbers[j] < numbers[j + 1]) {
+            let aux = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = aux;
+          }
+
+        }
+      }
+      //Fin: Ordena de mayor a menor
+
+
+      /*Descomentar si no se desea duplicados
+
+      //Inicio: Existe ya el nuevo valor?
+      let duplicated = false;
+      for (let i = 0; i < numbers.length; i++) {
+
+        if (newNumber == numbers[i]) {
+          duplicated = true;
+          break;
+        }
+      }
+      //Fin: Existe ya el nuevo valor?
+
+      if (duplicated === false) {
+
+      // seccion "Agrega nuevo valor"
+
+      }
+      */
+
+      //Inicio: Agrega nuevo valor
+      for (let i = 0; i < numbers.length; i++) {
+
+        for (let j = 0; j < numbers.length; j++) {
+
+          if (newNumber > numbers[j]) {
+            let aux = numbers[j];
+            numbers[j] = newNumber;
+            newNumber = aux;
+          }
+
+        }
+      }
+      //Fin: Agrega un nuevo valor
+
+      console.log("Score: " + numbers.toString());
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
