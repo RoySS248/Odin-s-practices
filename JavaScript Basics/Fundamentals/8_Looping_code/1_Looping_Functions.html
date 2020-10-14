@@ -14,7 +14,6 @@
       }
     }
 
-
     // Desglosar valor numerico en millares, decenas, etc.
     function descompose_number() {
       number = prompt("Ingresa el numero: ");
@@ -26,63 +25,30 @@
       }
     }
 
+    //Visualizar los números pares entre 2 y 20
+    function number_par() {
+      for (let i = 2; i <= 20; i++) {
+        if (i % 2 === 0) {
+          console.log(i);
+        }
+      }
+    }
 
-    //Agrega el numero dado en mayor a menor
-    function order_number() {
-      numbers = [2, 3, 4, 5, 6];
-      newNumber = prompt("Nuevo valor: ");
+    //Se visualizan los números primos del 1 al 20(n)
+    function prime_numbers() {
+      let numbers = 20;
+      column:
+      for (let i = 2; i <= numbers; i++) {
 
-      //Inicio: Ordena mayor a menor
-      for (let i = 0; i < numbers.length; i++) {
-        for (let j = 0; j < numbers.length - 1; j++) {
+        row:
+        for (let j = 2; j < i; j++) {
 
-          if (numbers[j] < numbers[j + 1]) {
-            let aux = numbers[j];
-            numbers[j] = numbers[j + 1];
-            numbers[j + 1] = aux;
+          if( i%j == 0){
+            continue column;
           }
-
         }
+        console.log(i);
       }
-      //Fin: Ordena de mayor a menor
-
-
-      /*Descomentar si no se desea duplicados
-
-      //Inicio: Existe ya el nuevo valor?
-      let duplicated = false;
-      for (let i = 0; i < numbers.length; i++) {
-
-        if (newNumber == numbers[i]) {
-          duplicated = true;
-          break;
-        }
-      }
-      //Fin: Existe ya el nuevo valor?
-
-      if (duplicated === false) {
-
-      // seccion "Agrega nuevo valor"
-
-      }
-      */
-
-      //Inicio: Agrega nuevo valor
-      for (let i = 0; i < numbers.length; i++) {
-
-        for (let j = 0; j < numbers.length; j++) {
-
-          if (newNumber > numbers[j]) {
-            let aux = numbers[j];
-            numbers[j] = newNumber;
-            newNumber = aux;
-          }
-
-        }
-      }
-      //Fin: Agrega un nuevo valor
-
-      console.log("Score: " + numbers.toString());
     }
 
   </script>
