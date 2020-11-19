@@ -1,27 +1,20 @@
 const gridContainer = document.querySelector('#grid-container');
 
-let sizeRow = 16  ;
-let sizeColumn = 16;
+createGrid(16);
 
-createGrid();
-
-function createGrid() {
+function createGrid(size) {
   let i = 0;
-  while (i < sizeRow) {
+  let area = size * size;
 
-    const row = document.createElement('div');
-    row.classList.add('row-grid');
+  while (i < area) {
 
-    j = 0
-    while (j < sizeColumn) {
-      const grid = document.createElement('div');
-      grid.classList.add('grid');
+    const grid = document.createElement('div');
+    grid.classList.add('box');
+    grid.id = i+1;
+    /*grid.textContent = i+1;*/
+    grid.style.padding = ((80/(size*2))-0.1)+"vh";
 
-      row.appendChild(grid);
-      j++
-    }
-
-    gridContainer.appendChild(row);
+    gridContainer.appendChild(grid);
     i++
   }
 }
@@ -36,10 +29,21 @@ function clearGrid(){
   }
 
   
-  sizeRow = parseInt(prompt("Filas: ",16));
-  sizeColumn = parseInt(prompt("Columnas: ",16));
+  let size = prompt("Tamaño (max 100): ",16);
 
-  createGrid();
+  if( isNaN(size*1) ){
+    size = 16;
+  }
+
+  if(size > 100){
+    size = 100;
+  }
+
+  if(size < 2){
+    size = 2;
+  }
+
+  createGrid(size);
 
 }
 
@@ -54,7 +58,7 @@ btnClear.addEventListener("click", () => {
 gridContainer.addEventListener('mouseover', function (e) {
 
   if (e.target.id != "grid-container") {
-    e.target.style.background = "blue";
+    e.target.style.background = "black";
   }
 
 
