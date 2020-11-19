@@ -2,6 +2,27 @@
   margin: 0;
   padding: 0;
 }
+#title{
+  text-align: center;
+  height: 10vh;
+  background-color: gainsboro;
+}
+
+#btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: cadetblue;
+}
+
+.btn{
+  padding: 10px;
+  background-color: linen;
+  border: darkslateblue 1px solid;
+  border-radius: 5px;
+}
 
 #container {
   background-color: cadetblue;
@@ -9,8 +30,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
 
 #grid-container {
   background-color: silver;
