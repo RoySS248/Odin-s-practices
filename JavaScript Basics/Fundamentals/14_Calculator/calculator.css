@@ -1,0 +1,73 @@
+#main{
+  min-height: 100vh;
+}
+
+#calculator-container{
+  background-color: lightslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#screen-container{
+  min-height: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#screen{
+  max-height: 3vw;
+  min-height: 3vw;
+  background-color: lightgreen;
+  border-radius: 5%;
+}
+
+#story{
+  max-height: 2vw;
+  min-height: 2vw;
+  background-color: blue;
+  border-radius: 5%;
+}
+
+#buttons-container{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.row-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+#numeric-buttons{
+  margin: 0;
+  background-color: greenyellow;
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#action-buttons{
+  margin: 0;
+  background-color: pink;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn{
+  min-width: 5vw;
+  min-height: 5vw;
+}
