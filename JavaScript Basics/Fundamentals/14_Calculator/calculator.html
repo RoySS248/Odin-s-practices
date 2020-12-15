@@ -23,31 +23,31 @@
             <div class="row-buttons">
 
               <div class="column-buttons">
-                <button class="btn" onclick="add_number_display(7)">7</button>
-                <button class="btn" onclick="add_number_display(4)">4</button>
-                <button class="btn" onclick="add_number_display(1)">1</button>
+                <button class="btn" id="seven" onclick="add_number_display(7)">7</button>
+                <button class="btn" id="four" onclick="add_number_display(4)">4</button>
+                <button class="btn" id="one" onclick="add_number_display(1)">1</button>
               </div>
 
               <div class="column-buttons">
-                <button class="btn" onclick="add_number_display(8)">8</button>
-                <button class="btn" onclick="add_number_display(5)">5</button>
-                <button class="btn" onclick="add_number_display(2)">2</button>
+                <button class="btn" id="eight"onclick="add_number_display(8)">8</button>
+                <button class="btn" id="five" onclick="add_number_display(5)">5</button>
+                <button class="btn" id="two" onclick="add_number_display(2)">2</button>
               </div>
             </div>
 
-            <button class="btn btn-zero" onclick="add_number_display(0)">0</button>
+            <button class="btn btn-zero" id="zero" onclick="add_number_display(0)">0</button>
           </div>
 
           <div class="column-buttons">
-            <button class="btn" onclick="add_number_display(9)">9</button>
-            <button class="btn" onclick="add_number_display(6)">6</button>
-            <button class="btn" onclick="add_number_display(3)">3</button>
-            <button class="btn" onclick="add_number_display('.')">.</button>
+            <button class="btn" id="nine" onclick="add_number_display(9)">9</button>
+            <button class="btn" id="six" onclick="add_number_display(6)">6</button>
+            <button class="btn" id="three" onclick="add_number_display(3)">3</button>
+            <button class="btn" id="point" onclick="add_number_display('.')">.</button>
           </div>
         </div>
 
         <div id="action-buttons">
-          <button class="btn" id="btn-clear" onclick=" ">DEL</button>
+          <button class="btn" id="btn-clear" onclick="del()">DEL</button>
           <div>
             <button class="btn" id="btn-div" onclick="add_story_display('÷')">÷</button>
             <button class="btn" id="btn-mul" onclick="add_story_display('x')">x</button>
