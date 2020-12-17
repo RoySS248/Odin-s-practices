@@ -3,13 +3,14 @@
 }
 
 #calculator-container{
-  background-color: lightslategray;
+  background-color: #778899;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 #screen-container{
+  background-color: #2e3c4b;
   min-height: 5vw;
   display: flex;
   flex-direction: column;
@@ -20,19 +21,19 @@
 #screen{
   max-height: 3vw;
   min-height: 3vw;
-  background-color: lightgreen;
   border-radius: 5%;
+  color: white;
 }
 
 #story{
   max-height: 2vw;
   min-height: 2vw;
-  background-color: blue;
   border-radius: 5%;
+  color: white;
 }
 
 #buttons-container{
-  background-color: black;
+  background-color: lightslategray;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,7 +52,6 @@
 
 #numeric-buttons{
   margin: 0;
-  background-color: greenyellow;
   padding: 1vw;
   display: flex;
   flex-direction: row;
@@ -60,7 +60,6 @@
 
 #action-buttons{
   margin: 0;
-  background-color: pink;
   padding: 1vw;
   display: flex;
   flex-direction: column;
