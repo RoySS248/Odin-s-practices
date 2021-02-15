@@ -34,7 +34,18 @@ function Book (title, author, pages, read){
 function addBookToLibrary(title, author, pages, read) {
   const book = new Book (title,author,pages,read);
   myLibrary.push(book);
+  getBookVisual();
   getBook();
+}
+
+function getData(){
+  let title = document.getElementById("titleBook").value;
+  let author = document.getElementById("authorBook").value;
+  let pages = document.getElementById("numPages").value;
+  let read = document.getElementById("isRead").checked;
+  addBookToLibrary(title,author,pages,read);
+  closeModal();
+  
 }
 
 
@@ -47,11 +58,13 @@ function getBook(){
 function changeStateRead(numBook){
   myLibrary[numBook].read = !myLibrary[numBook].read;
   getBookVisual();
+  getBook();
 }
 
 
 function deleteBook(numBook){
   myLibrary.splice([numBook],1);
+  getBookVisual();
   getBook();
 }
 
@@ -98,14 +111,19 @@ function getBookVisual(){
     changeRead.classList.add("btn-read");
     changeRead.textContent = book.read ? "Read" : "Unread";
     changeRead.onclick = () => changeStateRead(indexBook);
-
     divBook.appendChild(changeRead);
+  ///////
+  const deleteCurrent = document.createElement("button");
+  deleteCurrent.classList.add("btn-delete");
+  deleteCurrent.textContent = "Delete";
+  deleteCurrent.onclick = () => deleteBook(indexBook);
+  divBook.appendChild(deleteCurrent);
 
 
     container.appendChild(divBook);
   });
 }
-///
+////////////////////
 
 function formBook() {
   const modal = document.querySelector("#modal");
@@ -115,13 +133,6 @@ function formBook() {
 function closeModal(){
   const modal = document.querySelector("#modal");
   modal.style.display = "none";
-  modal.style.display = "flex";
 }
 
 ///////////////////////////////////////////////////////
-
-let btnRead = document.querySelector(".btn-rea");
-btnRead.addEventListener("click",function(e){
-  console.log(e);
-  console.log(e.target);
-});
