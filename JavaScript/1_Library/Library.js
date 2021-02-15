@@ -1,23 +1,111 @@
-let myLibrary = ["El oso Juancho", "El oso Juancho 2", "El oso Juancho 3: La venganza"];
-
-function Book() {
-
-}
-
-function addBookToLibrary() {
-
-}
-
-
+let myLibrary = [
+  {
+    title: "El oso Juancho",
+    author:"Samantha",
+    pages: 231,
+    read: true
+  },
+  {
+    title: "El oso Juancho 2",
+    author:"Samantha",
+    pages: 255,
+    read: true
+  },
+  {
+    title: "El oso Juancho 3: La venganza",
+    author:"Samantha",
+    pages: 324,
+    read: false
+  }
+];
 
 const container = document.querySelector("#container");
+getBookVisual();
 
-myLibrary.forEach(book => {
-  const paragraph = document.createElement("p");
-  paragraph.classList.add("paragraph");
-  paragraph.textContent = book;
-  container.appendChild(paragraph);
-});
+
+function Book (title, author, pages, read){
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+}
+
+
+function addBookToLibrary(title, author, pages, read) {
+  const book = new Book (title,author,pages,read);
+  myLibrary.push(book);
+  getBook();
+}
+
+
+function getBook(){
+  for (let i = 0; i < myLibrary.length; i++) {
+    console.log(myLibrary[i]);
+  }
+}
+
+function changeStateRead(numBook){
+  myLibrary[numBook].read = !myLibrary[numBook].read;
+  getBookVisual();
+}
+
+
+function deleteBook(numBook){
+  myLibrary.splice([numBook],1);
+  getBook();
+}
+
+function prueba(num){
+  alert(myLibrary[num].read);
+}
+
+////////////////////////////////
+function resetWindow(){
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+}
+////
+
+function getBookVisual(){
+  if (container.children.length > 0){
+    resetWindow();
+  }
+
+
+  myLibrary.forEach(book => {
+    let indexBook = myLibrary.indexOf(book);
+
+    const divBook = document.createElement("div");
+    divBook.classList.add("paragraph");
+    
+    const titleBook = document.createElement("h1");
+    titleBook.classList.add("title-book");
+    titleBook.textContent = book.title;
+    divBook.appendChild(titleBook);
+  /////
+    const authorBook = document.createElement("p");
+    authorBook.classList.add("author-book");
+    authorBook.textContent = `Author: ${book.author}`;
+    divBook.appendChild(authorBook);
+  /////
+    const numPages = document.createElement("p");
+    numPages.classList.add("num-pages-book");
+    numPages.textContent = `Pages:  ${book.pages}`;
+    divBook.appendChild(numPages);
+  //////
+    const changeRead = document.createElement("button");
+    changeRead.classList.add("btn-read");
+    changeRead.textContent = book.read ? "Read" : "Unread";
+    changeRead.onclick = () => changeStateRead(indexBook);
+
+    divBook.appendChild(changeRead);
+
+
+    container.appendChild(divBook);
+  });
+}
+///
 
 function formBook() {
   const modal = document.querySelector("#modal");
@@ -27,4 +115,13 @@ function formBook() {
 function closeModal(){
   const modal = document.querySelector("#modal");
   modal.style.display = "none";
+  modal.style.display = "flex";
 }
+
+///////////////////////////////////////////////////////
+
+let btnRead = document.querySelector(".btn-rea");
+btnRead.addEventListener("click",function(e){
+  console.log(e);
+  console.log(e.target);
+});
