@@ -11,38 +11,38 @@
   <main id="main">
     
     <div id="modal">
-      
       <form id="form">
-        <button type="button" onclick="closeModal()">X</button><br/>
+        <div class="title-form">
+          <button type="button" onclick="closeModal()" class="btn">X</button>
+          <label class="label-form">New Book</label>
+        </div>
 
-        <label>New Book</label><br/>
+        <label for="titleBook" class="label-form" >Title:</label>
+        <input type="text" id="titleBook" name="titleBook" value="" required>
 
-        <label for="titleBook">Title:</label><br/>
-        <input type="text" id="titleBook" name="titleBook"><br/>
+        <label for="authorBook" class="label-form" >Author:</label>
+        <input type="text" id="authorBook" name="authorBook" value="" required>
 
-        <label for="authorBook">Author:</label><br/>
-        <input type="text" id="authorBook" name="authorBook"><br/>
+        <label for="numPages" class="label-form" >Num of pages:</label>
+        <input type="number" id="numPages" name="numPages" value="" required>
 
-        <label for="numPages">Num of pages:</label><br/>
-        <input type="number" id="numPages" name="numPages"><br/>
+        <label for="isRead" class="label-form" >Is read:</label>
+        <input type="checkbox" id="isRead" name="isRead" >
 
-        <label for="isRead">Is read:</label><br/>
-        <input type="checkbox" id="isRead" name="isRead" ><br/>
-
-        <button type="button" onclick="getData()">ADD Book</button>
+        <button type="button" class="btn btn-add-book-form" onclick="getData()">ADD Book</button>
       </form>
     </div>
 
-    <h1>My Library ._.</h1>
-    <div>
-      <button class="btn" onclick="formBook()">
-        Add Book
+    <h1 class="title">My Library ._.</h1>
+    
+    <div class="div-btn">
+      <button class="btn btn-add-book" onclick="formBook()">
+        Add Books
       </button>
     </div>
 
-    <div id="container">
+    <div id="container"> </div>
 
-    </div>
   </main>
   <script src="Library.js"></script>
 </body>
