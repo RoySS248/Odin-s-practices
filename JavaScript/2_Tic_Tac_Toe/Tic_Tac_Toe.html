@@ -9,18 +9,21 @@
 </head>
 
 <body>
-  <main class="main">
-    <h1 class="title-2">TIC TAC TOE C:</h1>
-    <p class="winner-container"> &nbsp; </p>
-    <div class="game-board-container"></div>
-    <div class="btn-container">
-      <button onclick="">Reset</button>
+  <main id="main">
+
+    <div id="modal">
+      <h1 id="title-1">TIC TAC TOE</h1>
+      <p id="subtitle">Player vs. Player</p>
+      <button id="btn-start" onclick="closeModal()">Start!</button>
     </div>
 
-
-
+    <h1 id="title-2">TIC TAC TOE</h1>
+    <p id="winner"> &nbsp; </p>
+    <div id="game-board-container"></div>
+    <div class="btn-container">
+      <button id="btn-reset" onclick="btnReset()">Reset</button>
+    </div>
   </main>
-
   <script src="Tic_Tac_Toe.js"></script>
 </body>
 </html>
