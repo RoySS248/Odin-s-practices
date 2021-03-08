@@ -7,11 +7,11 @@
 #content{
   height: 100vh;
   width: 100vw;
-  background-color: #F2EFE9;
+  background-color: #9CC9C8;
 }
 
 #container-navbar{
-  background-color: aqua;
+  background-color: #0D0D0D;
   height: 5vh;
   width: 100vw;
   display: flex;
@@ -36,8 +36,9 @@
   color:white;
 }
 
+/*        HOME          */
 #container-hero{
-  background-color: blue;
+  background-color: #9CC9C8;
   height: 95vh;
   width: 100vw;
   display: flex;
@@ -58,7 +59,15 @@
 .img-hero{
   width: 30vw;
   height: 30vw;
-  box-shadow: -2vw -2vw black;
+  box-shadow: -2vw -2vw #0D0D0D;
+}
+
+#hero-title{
+  color: #732f20;
+}
+
+#hero-subtitle{
+  color: #732f20;
 }
 
 #container-text{
@@ -68,5 +77,72 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #0D0D0D;
 }
 
+
+/*        MENU          */
+#menu-title{
+  text-align: center;
+  font-size: 3vw;
+  color: #732f20;
+}
+
+#container-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #732f20;
+}
+
+#container-lunch{
+  width: 40vw;
+}
+#container-dinner{
+  width: 40vw;
+}
+
+.title-menu-container{
+  font-size: 2vw;
+}
+
+.time-menu-container{
+  font-size: 1vw;
+}
+
+.card-food{
+  background-color: #e0ffff;
+  padding: 1vh;
+  border: 0.2vw #0D0D0D solid ;
+  border-radius: 2vh;
+  margin: 2vh 0;
+  color: #0D0D0D;
+}
+
+.description-food{
+  margin: 0.5vh 0;
+}
+
+
+/*        ABOUT US       */
+
+#container-about{
+  background-color:#9CC9C8;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-title{
+  color: #732f20
+}
+
+#about-p{
+  margin: 1vh 0;
+  color: #0D0D0D;
+  width: 60vw;
+  text-align: center;
+}
