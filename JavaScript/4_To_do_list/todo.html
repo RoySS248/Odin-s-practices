@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./todo.css" >
+  <title>To do list</title>
+</head>
+
+<body>
+  <main id="main">
+    <header id="header">
+      <h1 class="size-aside-l">To Do List</h1>
+      <p class="size-aside-r">Proyecto I</p>
+    </header>
+
+    <div id="forms-container">
+      <form class="size-aside-l">
+        <input type="text" placeholder="New Project">
+        <input type="button" value="Add">
+      </form>
+      <form class="size-aside-r">
+        <input type="text" placeholder="New task">
+        <input type="text" placeholder="Description">
+        <input type="date">
+        <select>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+        <input type="button" value="Add">
+      </form>
+    </div>
+
+    <div id="to-do-container">
+      <aside id="projects-container" class="size-aside-l">s</aside>
+      <section id="tasks-container" class="size-aside-r">s</section>
+    </div>
+
+
+  </main>
+  <script src="./todo.js"></script>
+</body>
+
+</html>
