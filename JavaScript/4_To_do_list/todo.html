@@ -18,19 +18,19 @@
 
     <div id="forms-container">
       <form class="size-aside-l">
-        <input type="text" placeholder="New Project">
-        <input type="button" value="Add">
+        <input type="text" placeholder="New Project" id="name-project">
+        <input type="button" value="Add" onclick="addProject()">
       </form>
       <form class="size-aside-r">
-        <input type="text" placeholder="New task">
-        <input type="text" placeholder="Description">
-        <input type="date">
-        <select>
+        <input type="text" placeholder="New task" id="name-task">
+        <input type="text" placeholder="Description" id="description-task">
+        <input type="date" id="date-task">
+        <select id="priority-task">
           <option>Low</option>
           <option>Medium</option>
           <option>High</option>
         </select>
-        <input type="button" value="Add">
+        <input type="button" value="Add" onclick="addTasks()">
       </form>
     </div>
 
