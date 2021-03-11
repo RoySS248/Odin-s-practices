@@ -38,3 +38,28 @@
 #projects-container {}
 
 #tasks-container {}
+
+.card-project{  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 1vh 0;
+  padding: 2vh;
+  color:ghostwhite;
+  background-color: blueviolet;
+}
+
+.card-task{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 1vh 0;
+  padding: 2vh;
+  color:ghostwhite;
+  background-color: forestgreen;
+}
+
+.card-project-select{
+  background-color: rgb(173, 107, 235);
+}
