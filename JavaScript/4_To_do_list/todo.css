@@ -3,8 +3,12 @@
   padding: 0;
 }
 
+#main{
+  background-color: #EFE1BF;
+}
 
 #header {
+  background-color: #9B7350;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -12,6 +16,7 @@
 }
 
 #forms-container {
+  background-color: #DAB997;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -35,31 +40,65 @@
 }
 
 
-#projects-container {}
+#projects-container {
+  border-right: 0.5vh black solid;
+}
 
 #tasks-container {}
 
-.card-project{  display: flex;
+.card-project{  
+  background-color: #1B402F;
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: right;
 
-  margin: 1vh 0;
-  padding: 2vh;
+  margin: 1vh 1vh;
   color:ghostwhite;
-  background-color: blueviolet;
+
+  border: 0.5vh #40c082 solid;
+}
+
+.delete-project{
+  background-color: red;
+  width: 5vw;
+  padding: 2vh 0;
+  text-align: center;
+}
+
+.content-project{
+  width: 20vw;
+  padding: 2vh 0;
+  margin: 0 1vh; 
+  text-align: left;
 }
 
 .card-task{
+  background-color: #285C43;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  margin: 1vh 0;
+  margin: 1vh 1vh;
   padding: 2vh;
   color:ghostwhite;
-  background-color: forestgreen;
+  
+  border: 0.5vh #40c082 solid;
 }
 
 .card-project-select{
-  background-color: rgb(173, 107, 235);
+  background-color: #40c082;
+  color:black;
+  border: 0.5vh #285C43 solid;
+}
+
+.card-task-low{
+  background-color: #285C43;
+}
+
+.card-task-medium{
+  background-color: #c2b012;
+}
+
+.card-task-high{
+  background-color: #8b0a0a;
 }

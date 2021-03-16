@@ -30,14 +30,29 @@ const DOM_projects = (() => {
   const drawProjects = () => {
     resetProjects();
     projectsArray.forEach((project, i) => {
+
       let cardProject = document.createElement("div");
       cardProject.classList.add("card-project");
       cardProject.id = i;
-      cardProject.textContent = projectsArray[i].getName();
-      cardProject.onclick = () => {
+      containerProject.appendChild(cardProject);
+
+      
+      let deleteProject = document.createElement("div");
+      deleteProject.textContent = "x";
+      deleteProject.classList.add("delete-project");
+      deleteProject.onclick = () => {
+        setDeleteProject(cardProject.id)
+      };
+      cardProject.appendChild(deleteProject);
+
+
+      let contentProject = document.createElement("div");
+      contentProject.classList.add("content-project");
+      contentProject.textContent = projectsArray[i].getName();
+      contentProject.onclick = () => {
         getIndexProject(cardProject.id)
       };
-      containerProject.appendChild(cardProject);
+      cardProject.appendChild(contentProject);
     });
   }
 
@@ -46,6 +61,17 @@ const DOM_projects = (() => {
   };
 })();
 
+
+function setDeleteProject(id = 0) {
+  if (currentProject === id){
+    currentProject = 0;
+  }
+  
+  projectsArray.splice(id,1);
+
+  DOM_projects.drawProjects();
+  getIndexProject(currentProject);
+}
 
 function getIndexProject(id = 0) {
 
@@ -62,7 +88,7 @@ function getIndexProject(id = 0) {
 
 //   tareas
 const createTask = (name, description, date, priority, currentProject) => {
-  const taskArray = [name, description, date, priority];
+  const taskArray = [name, description, date, priority, false];
   projectsArray[currentProject].getTasks().push(taskArray);
 };
 
@@ -99,6 +125,11 @@ const DOM_Tasks = (() => {
       priority.textContent = task[3];
       cardTask.appendChild(priority);
 
+      let active = document.createElement("input");
+      active.type = "checkbox";
+      active.value = task[4];
+      cardTask.appendChild(active);
+
     });
 
   }
@@ -121,10 +152,8 @@ getIndexProject(currentProject);
 addProject = () => {
   let nameProject = document.getElementById("name-project").value;
   document.getElementById("name-project").value = "";
-  console.log(nameProject);
   nameProject = createProject(nameProject);
   projectsArray.push(nameProject);
-  console.log(projectsArray);
 
   DOM_projects.drawProjects();
   getIndexProject(currentProject);
@@ -148,4 +177,8 @@ addTasks = () => {
   DOM_projects.drawProjects();
   getIndexProject(currentProject);
 
+}
+
+setTask = (id) => {
+  
 }
