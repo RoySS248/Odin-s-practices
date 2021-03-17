@@ -7,7 +7,7 @@ let currentProject = 0;
 //     Proyecto
 const createProject = (name) => {
   const tasks = [
-//    ["NAME", "DESCRIPTION", "DATE", "PRIORITY"]
+//    ["NAME", "DESCRIPTION", "DATE", "PRIORITY", true]
   ];
 
   const getName = () => name;
@@ -15,7 +15,8 @@ const createProject = (name) => {
 
   return {
     getName,
-    getTasks
+    getTasks,
+    tasks
   };
 };
 
@@ -127,7 +128,13 @@ const DOM_Tasks = (() => {
 
       let active = document.createElement("input");
       active.type = "checkbox";
-      active.value = task[4];
+      active.checked = task[4];
+
+      active.onclick = () => {
+        setTask(i);
+      };
+
+      onclick="mostrar_oculto(this.form)"
       cardTask.appendChild(active);
 
     });
@@ -179,6 +186,19 @@ addTasks = () => {
 
 }
 
-setTask = (id) => {
+setTask = (taskID = 0) => {
+
   
+  let tasks =  projectsArray[currentProject].getTasks();
+  let tasksValue;
+  tasks.forEach((element, i) => {
+
+    if (i == taskID){
+      tasksValue = (element.splice(4, 1, !element[4]));
+    }
+    DOM_projects.drawProjects();
+    getIndexProject(currentProject);
+
+  });
+
 }
